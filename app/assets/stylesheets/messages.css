@@ -1,0 +1,47 @@
+
+.wrapper {
+  display: flex;
+}
+
+.side {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+
+.side_top {
+  background-color: #253141;
+  height: 100px;
+  padding: 0 20px;
+}
+
+.side_mid {
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+
+.main {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+  height: 100vh;
+}
+
+.main_top {
+  background-color: #FFFFFF;
+  height: 100px;
+  padding: 0 40px;
+}
+
+.main_mid {
+  background-color: #FAFAFA;
+  height: calc(100vh - 190px);
+  padding: 40px 40px 0;
+}
+
+.main_btm {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+}
