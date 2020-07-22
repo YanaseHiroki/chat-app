@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
+  # 中間テーブル
+  has_many :room_users
+  # 1人のユーザーは複数のチャットルームに参加
+  has_many :rooms, through: :room_users
 end
