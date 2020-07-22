@@ -1,4 +1,9 @@
 class RoomsController < ApplicationController
+
+  # rooms/index.html.erbのアクション
+  def index
+  end
+
   def new
     @room = Room.new
   end
