@@ -9,14 +9,12 @@
   </div>
 </div>
 <div class="side_mid">
-  <div class="room">
-    <div class="room-name">
-      <a href="#">techroom1</a>
+<%# ログイン中のユーザーのチャットルーム %>
+  <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <a href="#"><%= room.name%></a>
+      </div>
     </div>
-  </div>
-  <div class="room">
-    <div class="room-name">
-      <a href="#">techroom2</a>
-    </div>
-  </div>
+  <% end %>
 </div>
