@@ -12,4 +12,6 @@ class User < ApplicationRecord
   has_many :rooms, through: :room_users
   # 1人のユーザーに複数のメッセージ
   has_many :messages
+
+  validates :name, presence: true
 end
