@@ -10,23 +10,7 @@
 <div class="main_mid">
 
   <div class="message">
-    <div class="upper-message">
-      <div class="message-name">Tom</div>
-      <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">おはよう</div>
-    </div>
-  </div>
-
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-name">Sim</div>
-      <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">こんばんは</div>
-    </div>
+    <%= render partial: 'message', collection: @messages %>
   </div>
 
 </div>

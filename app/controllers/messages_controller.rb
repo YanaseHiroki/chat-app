@@ -1,10 +1,13 @@
 class MessagesController < ApplicationController
+  
   def index
     # フォームでメッセージを送信するときに引数として渡す
     # 情報を持っていない新規メッセージインスタンス
     @message = Message.new
     # どの部屋でメッセージを投稿したか
     @room = Room.find(params[:room_id])
+    # チャットルームに紐づいているメッセージを全て取得
+    @messages = @room.messages.includes(:user)
   end
 
   def create
