@@ -5,7 +5,11 @@ class Message < ApplicationRecord
   belongs_to :user
   # 各レコードと画像ファイルを1対1の関係で紐づける
   has_one_attached :image
+  # テキストが存在していなくても、画像の投稿が可能となります
+  validates :content, presence: true, unless: :was_attached?
   
-  # 投稿にメッセージが存在（presence）している場合のみ作成可（true）
-  validates :content, presence: true
+  # 画像が添付されている？
+def was_attached?
+  self.image.attached?
+end
 end
