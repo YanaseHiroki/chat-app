@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   # ユーザー編集に必要なルーティングは、editとupdateなので、
   resources :users, only: [:edit, :update]
   # 新規チャットルームの作成で動くアクションは「new」と「create」のみ
-  resources :rooms, only: [:new, :create]
+  resources :rooms, only: [:new, :create, :destroy] do
+    # ルームでのメッセージ投稿に必要なルーティングは、editとupdateなので、
+    resources :messages, only: [:index, :create]
+  end
 end
