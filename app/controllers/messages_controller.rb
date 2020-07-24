@@ -28,6 +28,6 @@ class MessagesController < ApplicationController
 
   def message_params
     # user_idと紐付いたメッセージを送るためのストロングパラメーター
-    params.require(:message).permit(:content).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
 end
